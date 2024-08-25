@@ -23,14 +23,14 @@ BOT_START = time()
 
 class Config:
     BOT_TOKEN = getenv("BOT_TOKEN", "")
-    API_HASH = getenv("API_HASH", "")
-    API_ID = getenv("API_ID", "")
+    API_HASH = getenv("API_HASH", "3f779654fdd3b9278fd95869aabf4593")
+    API_ID = getenv("API_ID", "17584090")
     if BOT_TOKEN == "" or API_HASH == "" or API_ID == "":
         LOGGER.critical("Variables Missing. Exiting Now...")
         exit(1)
     AUTO_BYPASS = getenv("AUTO_BYPASS", "False").lower() == "true"
-    AUTH_CHATS = getenv("AUTH_CHATS", "").split()
-    OWNER_ID = int(getenv("OWNER_ID", 0))
+    AUTH_CHATS = getenv("AUTH_CHATS", "-1002217233160").split()
+    OWNER_ID = int(getenv("OWNER_ID", 7252430326))
     DIRECT_INDEX = getenv("DIRECT_INDEX", "").rstrip("/")
     LARAVEL_SESSION = getenv("LARAVEL_SESSION", "")
     XSRF_TOKEN = getenv("XSRF_TOKEN", "")
